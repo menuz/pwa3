@@ -11,16 +11,16 @@ public class Global {
 
 	// 第三方用户唯一凭证
 //	public static String appId = "wx0f319efc8d73bfd7"; // 测试公众号
-	public static String appId = "wx614157e7ea178588"; 
+	public static String appId = "wx647da877560e07b0"; 
 	// 第三方用户唯一凭证密钥
 //	public static String appSecret = "1341a3c491568d98eca5c33f118a6c76"; // 测试公众号
-	public static String appSecret = "66f835d3147119f96d9c465eda983642";
+	public static String appSecret = "10c755b89eb58378fda4a1a33e6a517e";
 	
 	// 微信号
 //	public static String toUserName = "gh_e571fa59cecb"; // 测试公众号
 	public static String toUserName = "gh_925fb2759c3f";
 	
 	// 服务器Ip
-	public static String ip = "115.29.165.234";
+	public static String ip = "54.169.38.11";
 	
 }

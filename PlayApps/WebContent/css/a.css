@@ -1,0 +1,148 @@
+*{
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+p#lastword {
+    margin: 10px;
+}
+
+li.box3_li {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+p {}
+
+p.box3_word {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+p.word {
+    text-align: center;
+}
+body{
+}
+.box{
+  width: 100%;
+  background-color: #fff;
+}
+
+div#box3 {
+    height: 200px;
+    background: rgba(0, 143, 255, 0);
+    border-top: 1px dashed #ccc;
+}
+
+div#box2 {
+    height: 546px;
+}
+#reward{
+  float: right;
+  background-color: rgb(230, 56, 56);
+  border-radius: 10px;
+  padding: 3px 5px;
+  color: #fff;
+  position: relative;
+  top: 29px;
+  width: 75px;
+  right: 18px;
+}
+#box1{
+  height: 90px;
+  border-bottom: 1px dashed #ccc;
+}
+#card{
+  top: 10px;
+  left: 10px;
+  position: relative;
+  width: 60px;
+  height:60px;
+}
+
+#aa{
+  border: dotted 2px #ccc;
+  margin: 10px auto;
+  width: 70px;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+
+
+
+.btn{
+    color: #fff;
+    border-radius: 10px;
+    border:none;
+    width: 141px;
+    padding: 3px;
+    margin: 35px auto;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #FA7403;
+    cursor: pointer;
+    box-shadow: 0px 4px #FD5A05;
+    outline: none;
+  
+    top: 36px;
+    display: block;
+}
+ .btn:hover {
+    box-shadow: 0 3px #30607F;
+    top: 1px;
+  }
+  .btn:active {
+    box-shadow: 0 1px #30607F;
+    top: 3px;
+  }
+#word1 {
+	position:relative;
+	top: -29px;
+	left: 15px;
+	font-size: 22px;
+	background-color: rgba(0, 153, 0, 0);
+}
+#word2 {
+	position:relative;
+	top: 0px;
+	left: -37px;
+	font-size: 15px;
+	background-color: rgba(0, 153, 0, 0);
+}
+.step {
+    width: 60px;
+    position: relative;
+    top: 20px;
+}
+
+ {
+}
+{
+    text-align: center;
+
+}
+
+p#step2_word {
+    position: relative;
+    top: 19px;
+}
+img.image {
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    top: 16px;
+    width: 60px;
+    height: 60px;
+}
+img#search_img {
+	display: block;
+    margin: 0px auto;
+    position: relative;
+    top: 16px;
+    width: 40%
+}
+	  

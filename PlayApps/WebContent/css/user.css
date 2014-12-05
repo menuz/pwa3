@@ -1,0 +1,54 @@
+*{
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+input#button {
+    border-color: #e86b0f;
+    color: white;
+    background: #ff8200;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1.06rem;
+    height: 43px;
+    text-align: center;
+    border-radius: 3px;
+    width: 90%;
+    margin: 10px auto;
+}
+.box {
+    margin: 10px 0px;
+    background: white;
+    border: #d7d7d7 solid 1px;
+}
+
+.input-wra
+pper {
+    margin: 0px 16px;
+    border-bottom: #dddddd solid 1px;
+    padding: 5px;
+}
+label.icon {
+    float: left;
+}
+p.input-box {
+}
+input#account {
+    position: relative;
+    left: 6%;
+}
+.input-wrapper {
+    padding: 10px 0px;
+    border-bottom: #dddddd solid 1px;
+    margin: 0 16px;
+}
+
+li#note {
+    font-size: small;
+}
+input#name {
+    position: relative;
+    left: 6%;
+}

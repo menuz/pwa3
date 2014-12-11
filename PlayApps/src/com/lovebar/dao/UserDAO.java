@@ -355,15 +355,6 @@ public class UserDAO extends BaseDAO {
 		System.out.println(getUserInfoUrl);
 		String userInfoJson = URLUtil.getJson(getUserInfoUrl);
 		Map userInfoMap = URLUtil.Json2Map(userInfoJson);
-		// InetAddress address;
-		// try {
-		// address = InetAddress.getLocalHost();
-		// String ip = address.getHostAddress();
-		// System.out.println("IP:" + ip);
-		// } catch (UnknownHostException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
 		int sex = (Integer) userInfoMap.get("sex");
 		String webchat_name = (String) userInfoMap.get("nickname");
 		String remark = (String) userInfoMap.get("remark");

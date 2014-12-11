@@ -52,7 +52,7 @@ public class MenuManager {
 		btn11.setName("开始赚钱");
 		btn11.setType("click");
 		btn11.setKey("11");
-
+	
 		CommonButton btn12 = new CommonButton();
 		btn12.setName("邀请好友");
 		btn12.setType("click");

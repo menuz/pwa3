@@ -4,7 +4,7 @@ public class Global {
 	public static String datasource_url = "java:comp/env/jdbc/shike";
 	public static String server_ip = "localhost";
 	public static String server_port = "80";
-	public static String project_name = "shike";
+	public static String project_name = "PlayApps";
 
 	public static String sendEmail = "shike@163.com";
 	public static String sendEmailPwd = "kdhb2014";

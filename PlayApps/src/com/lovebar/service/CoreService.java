@@ -50,8 +50,6 @@ public class CoreService {
 			// 发送方帐号（open_id）
 			String fromUserName = requestMap.get("FromUserName");
 			
-			
-			
 			// 公众帐号
 			String toUserName = requestMap.get("ToUserName");
 			// 消息类型
@@ -95,6 +93,8 @@ public class CoreService {
 					respContent = "欢迎来到试玩天地，啥也不多说啦，试玩来看看效果吧";
 					//respContent = "subscribe";
 //					String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0f319efc8d73bfd7&redirect_uri=http%3a%2f%2f54.254.161.96%2fLoveBar%2fGetWeChatInfoServlet&response_type=code&scope=snsapi_userinfo&state=12#wechat_redirect";
+					// https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
+					
 					UserDAO userDao = new UserDAO();
 					userDao.getUserInfo(fromUserName);
 					// 2014.12.2 下面这个需要返回么？我注释掉勒
@@ -134,7 +134,7 @@ public class CoreService {
 						String title = "试玩列表";
 //						String url = "http://mp.weixin.qq.com/s?__biz=MzA4ODIxNDcxMw==&mid=200038816&idx=1&sn=6bf622411fc4d0bce911d7263baa6f3e#rd";
 //						String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0f319efc8d73bfd7&redirect_uri=http%3a%2f%2f54.254.161.96%2fLoveBar%2fGetWeChatInfoServlet&response_type=code&scope=snsapi_base&state=12#wechat_redirect";
-						String url = "http://" + Global.ip +"/LoveBar/ShowAdvsServlet?openid=" + fromUserName; // To do 等一下，这里user_id还得弄一下
+						String url = "http://" + Global.ip +"/"+Global.project_name + "/MainServlet?openid=" + fromUserName; // To do 等一下，这里user_id还得弄一下
 //						String url = "http://54.254.161.96/LoveBar/SetFinishedTaskServlet?user_id=7&app_name=大众点评"; // To do 等一下，这里user_id还得弄一下
 						String picUrl = "https://mmbiz.qlogo.cn/mmbiz/MYdb1onCeh7xiarIp5MQhxEbU8ssSqs4SHyWicmuFZsBAUJiczk8jtv8YdibLZjU9ib8bcCNzeqFiaO3JcU5oQiay2wJg/0";
 						String description = "每天更新，欢迎试玩";

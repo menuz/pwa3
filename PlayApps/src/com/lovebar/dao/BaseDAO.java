@@ -39,10 +39,7 @@ public class BaseDAO {
 				context = new InitialContext();
 			}
 			dataSource = (DataSource) context
-					.lookup("java:comp/env/jdbc/makemoney");
-
-//			System.out.println(context);
-//			System.out.println(dataSource);
+					.lookup("java:comp/env/jdbc/shike");
 
 		} catch (NamingException e2) {
 			e2.printStackTrace();

@@ -48,10 +48,15 @@ public class MenuManager {
 	 * @return
 	 */
 	private static Menu getMenu() {
-		CommonButton btn11 = new CommonButton();
-		btn11.setName("开始赚钱");
-		btn11.setType("click");
-		btn11.setKey("11");
+//		CommonButton btn11 = new CommonButton();
+//		btn11.setName("开始赚钱");
+//		btn11.setType("click");
+//		btn11.setKey("11");
+		
+		ViewButton btn11 = new ViewButton();
+		btn11.setName("我要提款");
+		btn11.setType("view");
+		btn11.setUrl("http://54.254.161.96/LoveBar/WithdrawServlet");
 	
 		CommonButton btn12 = new CommonButton();
 		btn12.setName("邀请好友");

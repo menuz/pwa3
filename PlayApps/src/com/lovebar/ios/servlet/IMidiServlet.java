@@ -54,7 +54,7 @@ public class IMidiServlet extends HttpServlet {
 			String cash = request.getParameter("cash");
 			String imei = request.getParameter("imei");
 			String bundle_id = request.getParameter("bundleId");
-			String app_name = new String(request.getParameter("appName")
+			String app_name = new String(request.getParameter("appName") 
 					.getBytes("ISO-8859-1"), "UTF-8");
 			String sign = request.getParameter("sign");
 
@@ -81,11 +81,12 @@ public class IMidiServlet extends HttpServlet {
 				}
 
 			} else {
-
+				out.print(404);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("IMidiServlet Exception");
 		}
 	}
 

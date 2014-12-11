@@ -99,11 +99,11 @@ public class TableLoader {
 				.toString();
 		int is_available = rs.getInt("is_available");
 		String ip = rs.getString("ip");
-		String device_id = rs.getString("device_id");
-		
-		String device_os = rs.getString("device_os");
-		String device_os_version = rs.getString("device_os_version");
-		String device_model = rs.getString("device_model");
+//		String device_id = rs.getString("device_id");
+//		
+//		String device_os = rs.getString("device_os");
+//		String device_os_version = rs.getString("device_os_version");
+//		String device_model = rs.getString("device_model");
 		int sex = rs.getInt("sex");
 		String province = rs.getString("province");
 		String openid = rs.getString("openid");
@@ -113,11 +113,10 @@ public class TableLoader {
 		int subscribe_time = rs.getInt("subscribe_time");
 		String remark = rs.getString("remark");
 		float applyMoney = rs.getFloat("applyMoney");
-		
 
 		User user = new User(user_id, webchat_name, image, alipy_name, account,
 				total_income, available_income, invite_income, income, ct,
-				is_available, ip, device_id, device_os, device_os_version, device_model,
+				is_available, ip, "", "", "", "",
 				sex, province, openid, language,
 				city, country, subscribe_time, remark, applyMoney);
 

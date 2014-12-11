@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.lovebar.dao.UserDAO;
 import com.lovebar.pojo.User;
+import com.lovebar.util.MessageUtil;
 
 import java.util.Date;
+import java.util.Map;
 import java.text.SimpleDateFormat;
 
 /**
@@ -37,6 +39,21 @@ public class WithdrawServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		try {
+			Map<String, String> requestMap = MessageUtil.parseXml(request);
+			System.out.println("------------------ Receive From Client ------------------");
+			for (Object o : requestMap.keySet()) {
+			   System.out.println("key=" + o + " value=" + requestMap.get(o));
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		// TODO Auto-generated method stub
 		String openid = null;
 

@@ -56,7 +56,7 @@ public class MenuManager {
 		ViewButton btn11 = new ViewButton();
 		btn11.setName("我要提款");
 		btn11.setType("view");
-		btn11.setUrl("http://54.254.161.96/LoveBar/WithdrawServlet");
+		btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid="+Global.appId+"&redirect_uri=http://"+Global.ip+"/"+Global.project_name+"/MainServlet?action=viewtest&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 	
 		CommonButton btn12 = new CommonButton();
 		btn12.setName("邀请好友");

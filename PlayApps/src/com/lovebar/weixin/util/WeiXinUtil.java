@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.lovebar.pojo.AccessToken;
+import com.lovebar.pojo.AuthAccessToken;
 import com.lovebar.weixin.pojo.Menu;
 
 /**
@@ -173,6 +174,43 @@ public class WeiXinUtil {
 	    }
 	    return text.substring(i);
 	}
+	
+	
+	// 获取access_token的接口地址（GET） 限200（次/天）
+			public final static String auth_access_token_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=APPSECRET&code=CODE&grant_type=authorization_code";
+
+			/**
+			 * 获取access_token
+			 * 
+			 * @param appid 凭证
+			 * @param appsecret 密钥
+			 * @return
+			 */
+			public static AuthAccessToken getAuthAccessToken(String appid, String appsecret, String code) {
+				AuthAccessToken accessToken = null;
+
+				String requestUrl = auth_access_token_url.replace("APPID", appid).replace("APPSECRET", appsecret).replace("CODE", code);
+				JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
+				
+				// System.out.println("jsonObject = " + jsonObject);
+				
+				// 如果请求成功
+				if (null != jsonObject) {
+					try {
+						accessToken = new AuthAccessToken();
+						accessToken.setToken(jsonObject.getString("access_token"));  
+						accessToken.setExpiresIn(jsonObject.getInt("expires_in"));
+						accessToken.setOpenid(jsonObject.getString("openid"));
+						accessToken.setRefresh_token(jsonObject.getString("refresh_token"));
+						accessToken.setScope(jsonObject.getString("scope"));
+					} catch (JSONException e) {
+						accessToken = null;
+						// 获取token失败
+						log.error("获取token失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+					}
+				}
+				return accessToken;
+			}
 }
 
 

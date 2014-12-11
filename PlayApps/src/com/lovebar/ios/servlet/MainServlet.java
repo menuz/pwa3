@@ -1,12 +1,9 @@
 package com.lovebar.ios.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,9 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.lovebar.dao.UserDAO;
-import com.lovebar.ios.servlet.IosMoneyDAO;
-import com.lovebar.ios.servlet.MiDi;
+import com.lovebar.pojo.AuthAccessToken;
 import com.lovebar.util.WxAes;
+import com.lovebar.weixin.util.WeiXinUtil;
+import com.shike.util.Global;
 
 
 @WebServlet("/MainServlet")
@@ -38,11 +36,14 @@ public class MainServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
 		request.setCharacterEncoding("utf8");
 		response.setContentType("text/json;charset=utf8");
 		
-		String openid = request.getParameter("openid");
+		String code = request.getParameter("code");
+		//System.out.println("code = " + code);
+		AuthAccessToken authAccessToken = WeiXinUtil.getAuthAccessToken(
+				Global.appId, Global.appSecret, code);
+		String openid = authAccessToken.getOpenid();
 		
 		UserDAO userDAO = new UserDAO();
 		int user_id = userDAO.getIdByOpenid(openid);

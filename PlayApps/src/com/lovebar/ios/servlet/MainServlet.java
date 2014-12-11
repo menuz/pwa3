@@ -48,9 +48,11 @@ public class MainServlet extends HttpServlet {
 		int user_id = userDAO.getIdByOpenid(openid);
 		
 		String r = WxAes.getEncryptResult(openid, user_id+"");
+		
+		System.out.println("openid = " + openid + " user_id = " + user_id);
+		
 		String redirect_url = "http://ow.miidi.net/ow/wxList.bin?r="+r;
 		response.sendRedirect(redirect_url);
-		
 	}
 
 	/**

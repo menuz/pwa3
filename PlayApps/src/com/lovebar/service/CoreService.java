@@ -131,13 +131,13 @@ public class CoreService {
 						newsMessage.setArticleCount(articleCount);
 						
 						Article article1 = new Article();
-						String title = "试玩列表";
+						String title = "一起玩";
 //						String url = "http://mp.weixin.qq.com/s?__biz=MzA4ODIxNDcxMw==&mid=200038816&idx=1&sn=6bf622411fc4d0bce911d7263baa6f3e#rd";
 //						String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0f319efc8d73bfd7&redirect_uri=http%3a%2f%2f54.254.161.96%2fLoveBar%2fGetWeChatInfoServlet&response_type=code&scope=snsapi_base&state=12#wechat_redirect";
 						String url = "http://" + Global.ip +"/"+Global.project_name + "/MainServlet?openid=" + fromUserName; // To do 等一下，这里user_id还得弄一下
 //						String url = "http://54.254.161.96/LoveBar/SetFinishedTaskServlet?user_id=7&app_name=大众点评"; // To do 等一下，这里user_id还得弄一下
 						String picUrl = "http://ww3.sinaimg.cn/mw690/a761af96gw1en5i5ibfnfj20p00dw76k.jpg";
-						String description = "每天更新，欢迎试玩";
+						String description = "跟伟哥一起玩应用!!";
 					 	article1.setTitle(title);
 						article1.setUrl(url);
 						article1.setPicUrl(picUrl);

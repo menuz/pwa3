@@ -136,7 +136,7 @@ public class CoreService {
 //						String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0f319efc8d73bfd7&redirect_uri=http%3a%2f%2f54.254.161.96%2fLoveBar%2fGetWeChatInfoServlet&response_type=code&scope=snsapi_base&state=12#wechat_redirect";
 						String url = "http://" + Global.ip +"/"+Global.project_name + "/MainServlet?openid=" + fromUserName; // To do 等一下，这里user_id还得弄一下
 //						String url = "http://54.254.161.96/LoveBar/SetFinishedTaskServlet?user_id=7&app_name=大众点评"; // To do 等一下，这里user_id还得弄一下
-						String picUrl = "http://ww3.sinaimg.cn/mw690/a761af96gw1en5i5ibfnfj20p00dw76k.jpg";
+						String picUrl = "https://mmbiz.qlogo.cn/mmbiz/cDuNompiaiabr0mcMwxsmlGyKrlA6g9HaGibt2Zvb5fjiaQW2gRmy8eEMVpBicScDuiaLZclvzcIdfuS1F38Jvs5jCoA/0";
 						String description = "跟伟哥一起玩应用!!";
 					 	article1.setTitle(title);
 						article1.setUrl(url);
